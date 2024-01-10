@@ -1,10 +1,11 @@
 .StreamPageMainDiv{
   background-color: black;
-  position: absolute;
   color: rgb(249, 240, 255);
+  position: absolute;
   width: 100%;
   height: 100%;
   overflow: auto;
+  z-index: 1;
 }
 
 ::-webkit-scrollbar{
@@ -17,6 +18,79 @@
 
 ::-webkit-scrollbar-thumb{
   color: #6209b6;
+}
+
+.Middleware{
+  background-color: black;
+  color: rgb(249, 240, 255);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: -1;
+}
+.ColorLED{
+  border: solid 2px green;
+  border-radius: 100%;
+  width: 2px;
+  background-color: green;
+  
+}
+.CPUOuter{
+  border: solid 2px white;
+  width: 14%;
+  height: 30%;
+  position: relative;
+ 
+}
+.LangOuterDiv{
+ background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+.FormBox{
+  background-color: #FAA7BB;
+  width: 70vw;
+  height: 90vh;
+  margin: 2vh;
+  border-radius: 15px;
+  padding: 2%;
+
+}
+.LangCard{
+  border: solid 2px #ffffff;
+  border-radius: 15px;
+  width: 20%;
+  height:20%;
+  margin:2%;
+  padding: 2%;
+  background-color: #ffffff;
+
+}
+
+.Server{
+  border: solid 2px white;
+  margin: 2px;
+  margin-top: 10%;
+  width: 30%;
+  height: 20%;
+  overflow: hidden;
+}
+.ServerRack{
+  border: solid 2px white;
+  margin: 2px;
+  width: 80%;
+  display: block;
+  height: 20%;
+  overflow: hidden;
+}
+.ServerOuterDiv{
+  border: solid 2px white;
+  width: 80vw;
+  height: 40vh;
+  border-radius: 100px;
+  overflow: hidden;
 }
 
 .Dashboard{
@@ -32,7 +106,7 @@
 .MonitorOuterDiv{
   margin-top: 5vh;
   border: solid 2px white;
-  border-radius: 10px;
+  border-radius: 20px;
   width: 50vw;
   height: 50vh;
 }
@@ -40,7 +114,9 @@
   border: solid 2px white;
   border-radius: 10px;
   margin-top: 2px;
+  border-top: none;
   padding:2%;
+  margin-top: 0;
   width: 96%;
   height: 97%;
   background-color: #272727;
@@ -53,6 +129,19 @@
   border-top: 0;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+}
+.Notch{
+  border: solid 2px white;
+  position: absolute;
+  left: 40%;
+  height: 15px;
+  width: 20%;
+  z-index: 1;
+  background-color: black;
+  margin-top: 0;
+  border-top: none;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .MonitorOuterDiv2{
@@ -101,10 +190,15 @@
 }
 
 @media only screen and (min-width: 992px) {
+  .Notch{
+    height: 0;
+    border: none;
+  }
   .DeviceCard{
   border-radius: 5px;
  margin: 1vw;
 }
+
   .MonitorBaseDiv{
     width: 5vw;
     height: 12vh;
@@ -113,9 +207,11 @@
   .MonitorOuterDiv{
     height: 70vh;
     width: 80vw;
+    border-radius: 10px;
   }
   .MonitorInnerDiv{
     width: 99%;
+    border: solid 2px white;
   }
   .DeviceHomeButton{
     border-radius: 20px;
